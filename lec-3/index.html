@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadetoggle/sidetoggale</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+
+    <style>
+        .box {
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+            border: 2px solid black;
+            padding: 30px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+
+        .box1 {
+            height: 400px;
+            width: 400px;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .contenair{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="contenair">
+        <div class="box">
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deserunt nihil maiores sequi
+                aliquam iste, eos,
+                numquam nobis eum quibusdam omnis voluptatem quae, officiis necessitatibus earum veritatis sit fugit
+                laboriosam!
+            </p>
+        </div>
+        <br>
+        <div class="box1"></div>
+        
+    </div>
+    <br><br>
+        <br><br>
+    <button class="btn2">slideup</button>
+    <button class="btn1">slidedown</button>
+    <button class="btn3">slidetoggle</button>
+    <button class="btn4">fadeout</button>
+    <button class="btn5">fadein</button>
+    <button class="btn6">fadetoggle</button>
+    <button class="btn7">fadeto</button>
+    <script>
+        $('.btn1').click(function(){
+            $(".txt").slideDown();
+        })
+        $('.btn2').on('click', function(){
+            $('.txt').slideUp();
+        })
+        $('.btn3').on('click', function(){
+            $('.txt').slideToggle(4000);
+        })
+        $('.btn4').click(function(){
+            $('.box1').fadeOut(4000);
+        })
+        $('.btn5').click(function(){
+            $('.box1').fadeIn(8000);
+        })
+
+        $('.btn6').click(function (){
+            $('.box1').fadeToggle(4000);
+        })
+        $('.btn7').click(function () {
+            $('.box1').fadeTo(5000, 0.5);
+        })
+    </script>
+</body>
+
+</html>

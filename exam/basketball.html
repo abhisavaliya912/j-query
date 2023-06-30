@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basketball</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <button> add ball</button>
+    <div id="container"></div>
+
+    <script>
+        $(function(){
+            var count=0;
+            $("button").on("click",function(){
+                $("#container").append('<span class="ball-in"></span>');
+                var arr=['red','yellow', 'blue','green','pink','#ff00ff','purple','#00fa9a','#d8bfd8','#ffd700' ]
+                const colNum=Math.floor((Math.random() * arr.length) + 0);
+                const ballColor=arr[colNum];
+                console.log(ballColor);
+                var spans=$('span');
+                const sp=spans.eq(count);
+                count=count+1;
+                sp.css({
+                    "background-color":ballColor
+                });
+            })
+        })
+    </script>
+    
+</body>
+</html>

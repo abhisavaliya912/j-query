@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j-query project-1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="click1">
+        <button class="btn1">click</button>
+    </div>
+
+    <div class="click2">
+        <button class="btn2">toggle</button><br>
+        <span style="color: chocolate; font-size: 28px; padding-left: 50px;">Toggle</span>
+    </div>
+
+    <div class="click3">
+        <h1 style="font-weight: bold; font-size: 20px; text-align: center;">DOUBBLE CLICK</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt velit modi harum delectus aspernatur atque
+            temporibus a perspiciatis perferendis dolorum ut reprehenderit unde obcaecati eos mollitia, fugit sit
+            maxime! Vitae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt velit modi harum delectus aspernatur atque
+            temporibus a perspiciatis perferendis dolorum ut reprehenderit unde obcaecati eos mollitia, fugit sit
+            maxime! Vitae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt velit modi harum delectus aspernatur atque
+            temporibus a perspiciatis perferendis dolorum ut reprehenderit unde obcaecati eos mollitia, fugit sit
+            maxime! Vitae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt velit modi harum delectus aspernatur atque
+            temporibus a perspiciatis perferendis dolorum ut reprehenderit unde obcaecati eos mollitia, fugit sit
+            maxime! Vitae.</p>
+
+        <button class="btn3">hide</button>
+        <button class="btn4">show</button>
+    </div>
+    <div class="click4">
+        <div class="box bgRed" onclick="changeBg('red')"></div>
+        <div class="box bgYellow" onclick="changeBg('yellow')"></div>
+        <div class="box bgGreen" onclick="changeBg('green')"></div>
+        <div class="box bgPink" onclick="changeBg('pink')"></div>
+        <div class="box bgWhite" onclick="changeBg('White')"></div>
+    </div>
+
+    <div class="click4">
+        <input type="text" name="uname" class="name"> <br> <br>
+        <input type="text" name="uname" class="name1"> <br> <br>
+        <input type="text" name="uname" class="name2"> <br> <br>
+    </div>
+
+    <script>
+        $(".btn1").click(function () {
+            alert('WEL-COME')
+        })
+
+        $('span').hide();
+        $('.btn2').click(function () {
+            $('span').toggle();
+        });
+
+        $(".btn3").dblclick(function () {
+            $('p').hide();
+        })
+        $(".btn4").dblclick(function () {
+            $('p').show();
+        })
+
+        function changeBg(color) {
+            $("body").attr("bgcolor", color)
+        }
+        $('.name').keypress(function () {
+            $('.name').css('background-color', 'red')
+        })
+        $('.name1').keydown(function () {
+            $('.name1').css('background-color', 'blue')
+        })
+
+        $('.name2').keyup(function () {
+            $('.name2').css('background-color', 'green')
+        })
+
+
+    </script>
+
+</body>
+
+</html>

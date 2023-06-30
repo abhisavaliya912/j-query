@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursor pointer</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <style>
+          
+            * {
+              margin: 0;
+              padding: 0;
+            }
+        
+            * {
+              cursor: none;
+            }
+        
+            /* body {
+              background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://picsum.photos/2200/1900/?random) center center;
+              background-size: cover;
+              height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            } */
+        
+            /* h1 {
+              color: white;
+              font-family: futura-pt, sans-serif;
+              letter-spacing: 10px;
+              font-weight: bold;
+              text-transform: uppercase;
+            } */
+        
+            .cursor {
+              position: absolute;
+              height: 20px;
+              width: 20px;
+              border-radius: 50%;
+              transform: translateX(-50%) translateY(-50%);
+            }
+        
+            .cursor:nth-child(1) {
+              background-color: #E74C3C;
+              z-index: 1;
+            }
+        
+            .cursor:nth-child(2) {
+              background-color: #fff;
+            }
+          </style>
+</head>
+<body>
+ 
+
+        <div class="cursor"></div>
+        <div class="cursor"></div>
+        <script>
+                $(document)
+      .mousemove(function (e) {
+        $('.cursor')
+          .eq(0)
+          .css({
+            left: e.clientX,
+            top: e.clientY
+          });
+        setTimeout(function () {
+          $('.cursor')
+            .eq(1)
+            .css({
+              left: e.clientX,
+              top: e.clientY
+            });
+        }, 100);
+      })
+        </script>
+
+</body>
+
+</html>

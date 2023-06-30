@@ -1,0 +1,27 @@
+/* Quetions */
+
+dl.questions {
+    background: #16A085;
+    color: #fff;
+}
+
+dl.questions dt {
+    background: #1ABC9C url('plus.svg') right center no-repeat;
+    background-size: 22px;
+    background-origin: content-box;
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid #16A085;
+}
+
+dl.questions dd {
+    padding: 15px;
+    background: #16A085;
+}
+
+dl.questions .expanded_img {
+  background: #1ABC9C url('minus.svg') right center no-repeat;
+  background-size: 15px;
+  background-origin: content-box;
+  cursor: pointer;
+}
